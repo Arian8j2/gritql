@@ -125,7 +125,7 @@ impl fmt::Display for DiffString {
     }
 }
 
-fn format_diff(expected: &str, actual: &str) -> DiffString {
+pub fn format_diff(expected: &str, actual: &str) -> DiffString {
     let mut output = String::new();
     let diff = TextDiff::from_lines(expected, actual);
 
